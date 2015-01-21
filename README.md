@@ -16,7 +16,8 @@ If you have any questions on installation and usage of `fcar`, feel free to cont
 `make`
 
 Common issues:
-* We included the necessary parts of `boost` and `blas` libraries in `fcar`. If your system has `boost` and `blas` installed, you can also change the linker and include path in Makefiles to guide gcc to use your boost and `blas` libraries.
+* We included the necessary parts of `boost` and `blas` libraries in `fcar`. If your system has `boost` and `blas` installed, you can also change the linker and include path in Makefiles to guide gcc to use your `boost` and `blas` libraries.
+* Currently, `fcar` only supports linux/unix.
 
 #### How to use
 After installation, four exectuable program will appear in the folder: `countCoverage`, `extractFeature`, `trainModel`, `predictModel`. In command line, type the program with no arguments to see options:
