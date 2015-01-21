@@ -3,4 +3,4 @@ linuxgcc:
 	gcc countCoverage.c ../fcarLib.o -L../samtools-0.1.18 -lbam -lz -lm -o ../countCoverage
 	gcc extractFeature.c ../fcarLib.o -L../samtools-0.1.18 -lbam -lz -lm -o ../extractFeature
 	gcc predictModel.c ../fcarLib.o -L../samtools-0.1.18 -lbam -lz -lm -o ../predictModel
-	gcc trainModel.c fcarLib.o -L../samtools-0.1.18 -lbam -lz -lm -o ../trainModel
+	gcc trainModel.c ../fcarLib.o -L../samtools-0.1.18 -lbam -lz -lm -o ../trainModel
