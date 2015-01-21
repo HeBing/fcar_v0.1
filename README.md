@@ -1,7 +1,7 @@
 # fcar
 
 #### Introduction
-`fcar` is short for ~flexible classification and regression toolbox in genomics~. 
+`fcar` is short for *flexible classification and regression toolbox in genomics*. 
 
 Simply put, `fcar` take bam files and a list genomic regions of interest as input, train models with signals in the bam files around those given regions, and predict biological activities of interest genomewide. 
 
@@ -13,8 +13,8 @@ Currently the models include: logistic regression with L1 penalty (Lasso regress
 * Step 2: change working directory to source code folder and type
 `make`
 
-__Common issues__:
-* If `boost` cannot be found (linker error), you need to check whether you have boost libraries installed. If not, check [here](). If yes, you need to add `-I path-to/boost/1.55.0/include` to your the include path, and `-L path-to/boost/1.55.0/lib` to your linker path of your gcc.
+Common issues:
+* If `boost` cannot be found (linker error), you need to check whether you have boost libraries installed. If not, check [here](http://www.boost.org/). If yes, you need to add `-I path-to/boost/1.55.0/include` to your the include path, and `-L path-to/boost/1.55.0/lib` to your linker path of your gcc.
 
 #### How to use
 After installation, four exectuable program will appear in the folder: `countCoverage`, `extractFeature`, `trainModel`, `predictModel`. In command line, type the program with no arguments to see options:
