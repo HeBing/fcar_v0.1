@@ -7,6 +7,8 @@ Simply put, `fcar` take bam files and a list genomic regions of interest as inpu
 
 Currently the models include: logistic regression with L1 penalty (Lasso regression), logistic regression with L2 penalty (Ridge regression), and random forest. Model averaging utility is also provided that averages predicted results from different models.
 
+If you have any questions on installation and usage of `fcar`, feel free to contact me at bhe3@jhu.edu.
+
 #### How to install
 
 * Step 1: download source code and unzip
@@ -14,7 +16,7 @@ Currently the models include: logistic regression with L1 penalty (Lasso regress
 `make`
 
 Common issues:
-* If `boost` cannot be found (linker error), you need to check whether you have boost libraries installed. If not, check [here](http://www.boost.org/). If yes, you need to add `-I path-to/boost/1.55.0/include` to your the include path, and `-L path-to/boost/1.55.0/lib` to your linker path of your gcc.
+* We included the necessary parts of `boost` and `blas` libraries in `fcar`. If your system has `boost` and `blas` installed, you can also change the linker and include path in Makefiles to guide gcc to use your boost and `blas` libraries.
 
 #### How to use
 After installation, four exectuable program will appear in the folder: `countCoverage`, `extractFeature`, `trainModel`, `predictModel`. In command line, type the program with no arguments to see options:
@@ -85,6 +87,5 @@ max=10000
 
 #### Note:
 * `fcar` uses codes from [`liblinear`](http://www.csie.ntu.edu.tw/~cjlin/liblinear/) and [`rt-rank`](https://sites.google.com/site/rtranking/) projects.
-* Currently, `fcar` only works under linux.
-* `fcar` requires library `boost`.
+* Currently, `fcar` only works under linux/unix.
 * To use the full functionality, `fcar` requires `python` to be installed. Some core programs can be used without `python` installed.
